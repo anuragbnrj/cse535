@@ -103,7 +103,7 @@ class GasStationActivity : AppCompatActivity(), OnMapReadyCallback, TextToSpeech
         }
 
         // Initialize Places API
-        Places.initialize(applicationContext, "AIzaSyA6N208PM2c_pBzPDaQdlOiko2SZ12FASk")
+        Places.initialize(applicationContext, "YOUR_API_KEY")
         placesClient = Places.createClient(this)
 
         // Initialize TextToSpeech
