@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    tools:context=".SymptomsActivity">
+
+
+    <TextView
+        android:id="@+id/textViewMapsActivityHeading"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="@string/maps_page_header"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/srcLat"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:hint="Source Latitude"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMapsActivityHeading" />
+
+    <EditText
+        android:id="@+id/srcLon"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:hint="Source Longitude"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMapsActivityHeading" />
+
+
+    <EditText
+        android:id="@+id/desLat"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:hint="Destination Latitude"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srcLat" />
+
+    <EditText
+        android:id="@+id/desLon"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:hint="Destination Longitude"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/srcLon" />
+
+
+    <Button
+        android:id="@+id/buttonCallMapsApi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Get Speeds"
+        app:layout_constraintBottom_toTopOf="@+id/textViewShowAPIResults"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desLat" />
+
+
+    <TextView
+        android:id="@+id/textViewShowAPIResults"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#673AB7"
+        android:textColor="@color/white"
+        android:text="Results Here"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

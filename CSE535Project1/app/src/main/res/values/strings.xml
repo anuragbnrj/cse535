@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Health Application</string>
+    <string name="respiratory_rate_display_text">Respiratory Rate: </string>
+    <string name="start_respiratory_rate">Measure Respiratory Rate</string>
+    <string name="stop_respiratory_rate">Stop Measuring Respiratory Rate</string>
+    <string name="heart_rate_display_text">Heart Rate: </string>
+    <string name="bpm">Beats Per Minute</string>
+    <string name="start_capture">Start Measuring Heart Rate</string>
+    <string name="stop_capture">Stop Capture</string>
+    <string name="symptom_page_header">Symptom Logging Page</string>
+    <string name="maps_page_header">Maps Page</string>
+
+
+    <string name="empty_not_saved">Could not save symptoms of user</string>
+    <string name="select_symptom">Select Symptom</string>
+    <string name="confirm_symptom_rating">Confirm Symptom Rating</string>
+    <string name="save_all_symptoms_ratings">Save Ratings of Symptoms</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TripSafe</string>
+    <string name="stop_detection">Stop Detection</string>
+    <string name="detect_drowsiness">Detect drowsiness</string>
+</resources>

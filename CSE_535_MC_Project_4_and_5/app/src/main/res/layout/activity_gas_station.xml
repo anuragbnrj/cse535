@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    tools:context=".GasStationActivity">
+
+    <!-- Heading (Top Part - 10%) -->
+    <TextView
+        android:id="@+id/textViewGasStationActivity"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="Speed Limit and Gas Station Suggestion"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"/>
+
+    <!-- Maps View (Middle Part - 60%) -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewGasStationActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6" />
+
+    <!-- Buttons (Bottom Part - 30%) -->
+    <GridLayout
+        android:id="@+id/buttonsGridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/mapFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_margin="8dp">
+
+        <!-- Button 1 -->
+        <TextView
+            android:id="@+id/speedLimit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="Speed Limit"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <!-- Button 2 -->
+        <TextView
+            android:id="@+id/currentSpeed"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="Current Speed"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <!-- Button 3 -->
+        <Button
+            android:id="@+id/buttonSuggestGasStation"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Get Suggested Gas Station"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <!-- Button 4 -->
+        <TextView
+            android:id="@+id/textViewSuggestedGasStation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+
+            android:text="The suggested gas station is: "
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+    </GridLayout>
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textViewLocationInstructions"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="#673AB7"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Enter your location in the text boxes or press button below to get current location"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewGasStationActivity" />-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonGetCurrentLocation"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:layout_marginTop="284dp"-->
+<!--        android:text="Get Current Location"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textViewLocationInstructions" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextLatitude"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="#673AB7"-->
+<!--        android:hint="Latitude"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintVertical_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonGetCurrentLocation" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextLongitude"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="#673AB7"-->
+<!--        android:hint="Longitude"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonGetCurrentLocation" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonSuggestGasStation"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:text="Get Fuzzy Suggested Gas Station"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextLatitude" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textViewSuggestedGasStation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:background="#673AB7"-->
+<!--        android:gravity="center"-->
+<!--        android:text="The Suggested Gas Station is: "-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/buttonSuggestGasStation" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

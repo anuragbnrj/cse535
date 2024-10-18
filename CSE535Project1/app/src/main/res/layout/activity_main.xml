@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewRespRate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="#673AB7"
+        android:gravity="center"
+        android:text="@string/respiratory_rate_display_text"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMeasureRespRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_respiratory_rate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRespRate" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMeasureRespRate" />
+
+    <TextView
+        android:id="@+id/textViewHeartRate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#673AB7"
+        android:text="@string/heart_rate_display_text"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewFinder" />
+
+    <Button
+        android:id="@+id/buttonMeasureHeartRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_capture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeartRate" />
+
+    <Button
+        android:id="@+id/buttonNavigateToSymptomLoggingPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/symptom_page_header"
+        android:layout_marginTop ="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMeasureHeartRate" />
+
+    <Button
+        android:id="@+id/buttonNavigateToMapsPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/maps_page_header"
+        android:layout_marginTop ="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNavigateToSymptomLoggingPage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:padding="@dimen/big_padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNavigateToMapsPage"
+        tools:listitem="@layout/recyclerview_item" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
